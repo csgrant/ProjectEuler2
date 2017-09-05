@@ -1,0 +1,20 @@
+public class Euler2 {
+	public static void main(String[] args) {
+		int count=0;
+		int first=1;
+		int second=2;
+		int third =0;
+    
+		while (third <=4000000){
+			third = second;
+			if (third % 2 == 0){
+				count += third;
+			}
+			third = first + second;
+			first = second;
+			second = third;
+		}
+		System.out.println(count);
+	}
+
+}
